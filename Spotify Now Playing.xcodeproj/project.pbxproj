@@ -7,19 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D023C722AA24CCD00045180 /* Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9D023C712AA24CCD00045180 /* Dynamic */; };
+		9D023C752AA250CF00045180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023C742AA250CF00045180 /* AppDelegate.swift */; };
+		9D023C782AA251B700045180 /* MRNowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023C772AA251B700045180 /* MRNowPlaying.swift */; };
 		9D93C37B2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D93C37A2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift */; };
 		9D93C37D2AA11CD1005AA045 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D93C37C2AA11CD1005AA045 /* ContentView.swift */; };
 		9D93C37F2AA11CD3005AA045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D93C37E2AA11CD3005AA045 /* Assets.xcassets */; };
 		9D93C3822AA11CD3005AA045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D93C3812AA11CD3005AA045 /* Preview Assets.xcassets */; };
+		9D93C38B2AA11D4D005AA045 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D93C38A2AA11D4D005AA045 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D023C742AA250CF00045180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D023C772AA251B700045180 /* MRNowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRNowPlaying.swift; sourceTree = "<group>"; };
 		9D93C3772AA11CD1005AA045 /* Spotify Now Playing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify Now Playing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D93C37A2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_Now_PlayingApp.swift; sourceTree = "<group>"; };
 		9D93C37C2AA11CD1005AA045 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9D93C37E2AA11CD3005AA045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D93C3812AA11CD3005AA045 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D93C3832AA11CD3005AA045 /* Spotify_Now_Playing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Now_Playing.entitlements; sourceTree = "<group>"; };
+		9D93C38A2AA11D4D005AA045 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +34,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D023C722AA24CCD00045180 /* Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D023C732AA2509000045180 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D023C742AA250CF00045180 /* AppDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9D023C762AA2518600045180 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9D023C772AA251B700045180 /* MRNowPlaying.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		9D93C36E2AA11CD1005AA045 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				9D93C37A2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift */,
-				9D93C37C2AA11CD1005AA045 /* ContentView.swift */,
+				9D023C762AA2518600045180 /* Tools */,
+				9D023C732AA2509000045180 /* Controllers */,
+				9D93C3892AA11D39005AA045 /* Views */,
 				9D93C37E2AA11CD3005AA045 /* Assets.xcassets */,
 				9D93C3832AA11CD3005AA045 /* Spotify_Now_Playing.entitlements */,
 				9D93C3802AA11CD3005AA045 /* Preview Content */,
@@ -67,6 +93,15 @@
 				9D93C3812AA11CD3005AA045 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D93C3892AA11D39005AA045 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D93C37C2AA11CD1005AA045 /* ContentView.swift */,
+				9D93C38A2AA11D4D005AA045 /* MenuView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +120,9 @@
 			dependencies = (
 			);
 			name = "Spotify Now Playing";
+			packageProductDependencies = (
+				9D023C712AA24CCD00045180 /* Dynamic */,
+			);
 			productName = "Spotify Now Playing";
 			productReference = 9D93C3772AA11CD1005AA045 /* Spotify Now Playing.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 9D93C36E2AA11CD1005AA045;
+			packageReferences = (
+				9D023C702AA24CCD00045180 /* XCRemoteSwiftPackageReference "Dynamic" */,
+			);
 			productRefGroup = 9D93C3782AA11CD1005AA045 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D023C752AA250CF00045180 /* AppDelegate.swift in Sources */,
+				9D023C782AA251B700045180 /* MRNowPlaying.swift in Sources */,
 				9D93C37D2AA11CD1005AA045 /* ContentView.swift in Sources */,
+				9D93C38B2AA11D4D005AA045 /* MenuView.swift in Sources */,
 				9D93C37B2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D023C702AA24CCD00045180 /* XCRemoteSwiftPackageReference "Dynamic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mhdhejazi/Dynamic.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D023C712AA24CCD00045180 /* Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D023C702AA24CCD00045180 /* XCRemoteSwiftPackageReference "Dynamic" */;
+			productName = Dynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D93C36F2AA11CD1005AA045 /* Project object */;
 }

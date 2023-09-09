@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+class NowPlayingInfo: ObservableObject {
+	@Published var info: [String:Any] = ["kMRMediaRemoteNowPlayingInfoTitle": "How Deep Is Your Love", "kMRMediaRemoteNowPlayingInfoArtist": "Bee Gees", "kMRMediaRemoteNowPlayingInfoAlbum": "Greatest"]
+}
+
 @main
 struct Spotify_Now_PlayingApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	@NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
+	
+	var body: some Scene {
+		WindowGroup {
+			ContentView()
+		}
+	}
 }
+
