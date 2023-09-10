@@ -24,7 +24,7 @@ import Dynamic
 //}
 
 class MRNowPlaying {
-	func getNowPlayingInfo() async -> Void {
+	func getNowPlayingInfo()  -> Void {
 		
 		// https://stackoverflow.com/questions/30700079/programatically-get-the-name-and-artist-of-the-currently-playing-track-in-swift/74990535#74990535
 		// Load framework
@@ -40,7 +40,7 @@ class MRNowPlaying {
 //		let queueGroup = DispatchGroup()
 		
 		// Get song info
-		await MRMediaRemoteGetNowPlayingInfo(DispatchQueue.main, { (information) in
+		MRMediaRemoteGetNowPlayingInfo(DispatchQueue.main, { (information) in
 			//			let bundleInfo = Dynamic._MRNowPlayingClientProtobuf.initWithData(information["kMRMediaRemoteNowPlayingInfoClientPropertiesData"])
 			
 //			information.keys.forEach { key in

@@ -24,7 +24,7 @@ struct MenuView: View {
 					.cornerRadius(3)
 				
 				// title, artist, album name
-				VStack {
+				VStack(alignment: .leading) {
 					Text(nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoTitle"] as! String)
 						.font(.system(size: 13, weight: .semibold, design: .default))
 					
@@ -34,6 +34,7 @@ struct MenuView: View {
 					
 					Text(npArtist + " - " + npAlbum)
 						.font(.system(size: 11, weight: .none, design: .default))
+						.lineLimit(/*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 				}
 				
 				Spacer()
@@ -67,8 +68,6 @@ struct MenuView: View {
 }
 
 struct MenuView_Previews: PreviewProvider {
-//	npi.info["kMRMediaRemoteNowPlayingInfoArtworkData"] =
-	
 	static var previews: some View {
 		MenuView(nowPlayingInfo: NowPlayingInfo())
 	}
