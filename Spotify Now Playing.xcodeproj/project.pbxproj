@@ -15,6 +15,7 @@
 		9D93C37F2AA11CD3005AA045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D93C37E2AA11CD3005AA045 /* Assets.xcassets */; };
 		9D93C3822AA11CD3005AA045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D93C3812AA11CD3005AA045 /* Preview Assets.xcassets */; };
 		9D93C38B2AA11D4D005AA045 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D93C38A2AA11D4D005AA045 /* MenuView.swift */; };
+		9DC748662AB209EF0065032B /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC748652AB209EF0065032B /* SpotifyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9D93C3812AA11CD3005AA045 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D93C3832AA11CD3005AA045 /* Spotify_Now_Playing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Now_Playing.entitlements; sourceTree = "<group>"; };
 		9D93C38A2AA11D4D005AA045 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9DC748652AB209EF0065032B /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				9D023C772AA251B700045180 /* MRNowPlaying.swift */,
+				9DC748652AB209EF0065032B /* SpotifyAPI.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				9D2903662AAC2CEE0045349E /* AppDelegate.swift in Sources */,
 				9D023C782AA251B700045180 /* MRNowPlaying.swift in Sources */,
 				9D93C37D2AA11CD1005AA045 /* ContentView.swift in Sources */,
+				9DC748662AB209EF0065032B /* SpotifyAPI.swift in Sources */,
 				9D93C38B2AA11D4D005AA045 /* MenuView.swift in Sources */,
 				9D93C37B2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift in Sources */,
 			);

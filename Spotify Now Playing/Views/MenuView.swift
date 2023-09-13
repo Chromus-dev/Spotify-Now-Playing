@@ -26,7 +26,7 @@ struct MenuView: View {
 				// title, artist, album name
 				VStack(alignment: .leading) {
 					Text(nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoTitle"] as! String)
-						.font(.system(size: 13, weight: .semibold, design: .default))
+						.font(.system(size: 13, weight: .semibold, design: .default)).lineLimit(2)
 					
 					// artist and album
 					let npArtist = nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoArtist"] as! String
@@ -36,11 +36,19 @@ struct MenuView: View {
 						.font(.system(size: 11, weight: .none, design: .default))
 						.lineLimit(/*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 				}
+				//.frame(width: 160, alignment: .leading)
+				
+				Spacer()
+				
+				// like button
+				Button(action: {}, label: {
+					Image(systemName: "heart").foregroundColor(.primary)
+				}).buttonStyle(PlainButtonStyle())
 				
 				Spacer()
 			}.padding(14).frame(maxWidth: .infinity)
 			
-			
+			Spacer()
 			
 			// playhead and songlength thingy
 			
@@ -63,6 +71,7 @@ struct MenuView: View {
 				}).buttonStyle(PlainButtonStyle())
 			}.padding()
 		}
+		// height needs to be increased for shuffle and loop buttons
 		.frame(width: 300, height: 142)
 	}
 }
