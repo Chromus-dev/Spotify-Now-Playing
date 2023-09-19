@@ -32,7 +32,7 @@ struct SpotifyAPI {
 			
 			let url = URL(string:(executeScript(phrase: "artwork url of current track")))
 			let result: NSData? = url != nil ? NSData(contentsOf:  url!) : nil
-			
+					
 			return result
 		}
 		
@@ -45,7 +45,8 @@ struct SpotifyAPI {
 		}
 		
 		static func toNextTrack(){
-			executeScript(phrase: "next track")
+			var e = executeScript(phrase: "next track")
+			print(e)
 		}
 		
 		static func toPreviousTrack(){
@@ -61,6 +62,8 @@ struct SpotifyAPI {
 		}
 		
 		static func executeScript(phrase: String) -> String{
+			print("executing script")
+			
 			var output = ""
 			let script = NSAppleScript(source: "\(commandStart) \(phrase)" )
 			var errorInfo: NSDictionary?

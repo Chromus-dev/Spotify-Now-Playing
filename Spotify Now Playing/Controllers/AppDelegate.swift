@@ -37,7 +37,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	@objc func MenuButtonToggle(sender: AnyObject) {
-		
 		if popOver.isShown {
 			popOver.performClose(sender)
 		}

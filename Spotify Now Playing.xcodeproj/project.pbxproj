@@ -29,6 +29,7 @@
 		9D93C3832AA11CD3005AA045 /* Spotify_Now_Playing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Now_Playing.entitlements; sourceTree = "<group>"; };
 		9D93C38A2AA11D4D005AA045 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9DC748652AB209EF0065032B /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
+		9DE0FA822AB597A200ABBD2F /* Spotify-Now-Playing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Spotify-Now-Playing-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		9D93C3792AA11CD1005AA045 /* Spotify Now Playing */ = {
 			isa = PBXGroup;
 			children = (
+				9DE0FA822AB597A200ABBD2F /* Spotify-Now-Playing-Info.plist */,
 				9D2903692AAC316D0045349E /* Controllers */,
 				9D93C37A2AA11CD1005AA045 /* Spotify_Now_PlayingApp.swift */,
 				9D023C762AA2518600045180 /* Tools */,
@@ -324,8 +326,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spotify-Now-Playing-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Spotify Now Playing";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Please give access to Get info from Spotify";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,8 +357,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spotify-Now-Playing-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Spotify Now Playing";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Please give access to Get info from Spotify";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

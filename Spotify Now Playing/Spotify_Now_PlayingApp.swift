@@ -8,7 +8,7 @@
 import SwiftUI
 
 class NowPlayingInfo: ObservableObject {
-	@Published var info: [String:Any] = ["kMRMediaRemoteNowPlayingInfoTitle": "How Deep Is Your Love but this song is super duper long", "kMRMediaRemoteNowPlayingInfoArtist": "Bee Gees", "kMRMediaRemoteNowPlayingInfoAlbum": "Greatest"]
+	@Published var info: [String:Any] = ["kMRMediaRemoteNowPlayingInfoTitle": "How Deep Is Your Love", "kMRMediaRemoteNowPlayingInfoArtist": "Bee Gees", "kMRMediaRemoteNowPlayingInfoAlbum": "Greatest"]
 }
 
 @main

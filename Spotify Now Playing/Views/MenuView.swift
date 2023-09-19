@@ -15,9 +15,7 @@ struct MenuView: View {
 			
 			HStack {
 				// album cover
-//				let artworkNSImage = NSImage(data: nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoArtworkData"] as! Data)
-//				Image(nsImage: artworkNSImage!)'
-				Image("TestArtwork")
+				Image(nsImage: NSImage(data: SpotifyAPI.getCover()! as Data) ?? NSImage(imageLiteralResourceName: "placeholderAlbumCover"))
 					.resizable()
 					.aspectRatio(contentMode: .fit)
 					.frame(width: 50, height: 50)
@@ -25,17 +23,18 @@ struct MenuView: View {
 				
 				// title, artist, album name
 				VStack(alignment: .leading) {
-					Text(nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoTitle"] as! String)
+					//Text(nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoTitle"] as! String)
+					Text(SpotifyAPI.getTitle())
 						.font(.system(size: 13, weight: .semibold, design: .default)).lineLimit(2)
 					
 					// artist and album
-					let npArtist = nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoArtist"] as! String
-					let npAlbum = nowPlayingInfo.info["kMRMediaRemoteNowPlayingInfoAlbum"] as! String
+					let npArtist = SpotifyAPI.getArtist()
+					let npAlbum = SpotifyAPI.getAlbum()
 					
 					Text(npArtist + " - " + npAlbum)
 						.font(.system(size: 11, weight: .none, design: .default))
 						.lineLimit(/*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-				}
+				}.padding(2)
 				//.frame(width: 160, alignment: .leading)
 				
 				Spacer()
@@ -43,9 +42,10 @@ struct MenuView: View {
 				// like button
 				Button(action: {}, label: {
 					Image(systemName: "heart").foregroundColor(.primary)
-				}).buttonStyle(PlainButtonStyle())
-				
-				Spacer()
+				})
+				.buttonStyle(PlainButtonStyle())
+				.padding(.trailing)
+		
 			}.padding(14).frame(maxWidth: .infinity)
 			
 			Spacer()
@@ -55,18 +55,26 @@ struct MenuView: View {
 			// skip pause play buttons
 			HStack {
 				// 25 px
-				Button(action: {}, label: {
+				Button(action: {
+					
+					SpotifyAPI.toPreviousTrack()
+					
+				}, label: {
 					Image(systemName: "backward.fill").foregroundColor(.primary)
 				}).buttonStyle(PlainButtonStyle())
 				
 				// 39 px
-				Button(action: {}, label: {
+				Button(action: {
+					SpotifyAPI.toPlayPause()
+				}, label: {
 					Image(systemName: "play.fill")
 						.foregroundColor(.primary)
 				}).buttonStyle(PlainButtonStyle())
 				
 				// 25 px
-				Button(action: {}, label: {
+				Button(action: {
+					SpotifyAPI.toNextTrack()
+				}, label: {
 					Image(systemName: "forward.fill").foregroundColor(.primary)
 				}).buttonStyle(PlainButtonStyle())
 			}.padding()

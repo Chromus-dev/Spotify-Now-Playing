@@ -11,6 +11,13 @@ struct ContentView: View {
 	var body: some View {
 		VStack {
 			Text("Spotify Now Playing")
+			
+			Button(action: {
+				let _ = print(SpotifyAPI.getTitle() + " oh")
+			}, label: {
+				Image(systemName: "play.fill")
+					.foregroundColor(.primary)
+			}).buttonStyle(PlainButtonStyle())
 		}
 		.frame(width: 300, height: 300)
 	}
